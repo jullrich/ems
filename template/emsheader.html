@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>EMSTree - Neighborhood Messaging System</title>
+<link href="style.css"  media="all" rel="stylesheet" type="text/css" />
+<META NAME="ROBOTS" CONTENT="NOINDEX">
+</head>
+<body>
+<h1>Neighborhood Messaging System</h1>
+<a href="help.html">HELP</a>
+<?php
+if ( isset($iUserID) && $iUserID ) {
+?>
+<a href="index.html?logout=Y">Logout</a>
+<?php   
+} else {
+?>
+<a href="index.html">Login</a>
+<?php
+}
+?>
+<div id="banner">
+<h2><?php echo("$sTitle"); ?></h2>
+</div>
