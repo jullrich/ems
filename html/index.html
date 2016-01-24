@@ -1,0 +1,93 @@
+<?php
+require("header.php");
+$sTitle="Index";
+require("../template/emsheader.html");
+
+
+?>
+<script src="/js/jscript.js"></script>
+<p class="error">
+Status: all systems up and running.
+
+</p>
+<p class="error">
+<?php print $sError ?>
+</p>
+    <div id="content" class="column">
+      
+
+
+<ol id="either-or">
+<li id="openid-signup" class="branch">
+<h3>Login or signup <small>Recommended</small></h3>
+<div class="content">
+<iframe src="https://springfield-ems.rpxnow.com/openid/embed?token_url=http://www.emstree.com/openid.html"
+  scrolling="no" frameBorder="no" style="width:340px;height:240px;">
+</iframe>
+</div>
+</li>
+
+<li class="separator">
+    <p>Or</p>
+
+  </li>
+
+  <li id="signup" class="branch">
+    <h3>Login using a SPRWatch account</h3>
+    
+    <div class="content">
+      <form action="login.html" id="new_session" method="post"><div style="margin:0;padding:0"><input name="authenticity_token" type="hidden" value="HHlv2ZjBvau674NRpyT6JZgmTLgeXKeq86neLU+kY5Y=" /></div>
+        <fieldset>
+          <ol>
+            <li>
+
+              <label for="username">Email Address</label>
+              <input class="text" id="username" name="username" size="20" tabindex="1" type="text" />
+            </li>
+            <li>
+              <label for="password">
+                Password
+                (<a href="#" onclick="$(this).up('form').hide(); $('forgot_password').show(); $('forgot_password').focusFirstElement();; return false;">Forget your Password?</a>)
+              </label>
+              <input class="password" id="password" name="password" size="20" tabindex="2" type="password" />
+
+              <p class="example">
+              
+              </p>
+            </li>
+<!--
+            <li class="checkbox">
+              <input class="checkbox" id="remember_me" name="remember_me" tabindex="3" type="checkbox" value="1" />
+              <label for="remember_me">Remember me</label>
+            </li>
+-->
+          </ol>
+
+        </fieldset>
+        <input class="submit" name="commit" tabindex="4" type="submit" value="Login" />
+      
+        <p class="signup">Want a SPRWatch account? <a href="register.html">Signup</a></p>      
+      </form>
+
+      <form action="pwreset.html" id="forgot_password" method="post" style="display: none;"><div style="margin:0;padding:0"><input name="authenticity_token" type="hidden" value="HHlv2ZjBvau674NRpyT6JZgmTLgeXKeq86neLU+kY5Y=" /></div>
+        <fieldset>
+          <legend>Password Reset</legend>
+
+          <ol>
+            <li>
+              <label for="email">Your Email</label>
+              <input class="text" id="email" name="email" size="15" type="text" />
+            </li>
+          </ol>
+        </fieldset>
+        <input class="submit" name="commit" type="submit" value="Send Email" />
+
+      </form>  
+      <div class="clear-fix"></div>
+    </div>       
+  </li>
+</ol>
+</div>
+
+</body>
+</html>
